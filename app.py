@@ -164,6 +164,17 @@ def ideal_weight_hamwi(gender, height_cm):
 st.title("🏥 BMI & Health Calculators")
 st.write("Simple, clear health calculators — no API keys, just local formulas.")
 
+# Sidebar: random tip and theme toggle
+with st.sidebar:
+    st.header("Quick Actions")
+    if st.button("Show a health tip 🌟"):
+        st.info(random.choice(HEALTH_TIPS))
+    theme_dark = st.checkbox("Dark mode (simple)")
+
+# Small theme switch using CSS override (simple)
+if theme_dark:
+    st.markdown("<style> .stApp { background: linear-gradient(180deg, #0f1724 0%, #071124 100%); color: #e6eef8; } .card{ background:#0b1220; color:#e6eef8; box-shadow:none; } </style>", unsafe_allow_html=True)
+
 # Tabs for calculators
 tabs = st.tabs(["BMI 🧮", "BMR 🔥", "Body Fat % 📊", "Ideal Weight ⚖️", "Health Tips 💡"])
 
@@ -274,6 +285,6 @@ with tabs[4]:
 
 # Footer
 st.markdown("---")
-st.caption("Developed By Alizay Ahmed")
+st.caption("Alizay Ahmed")
 
 
