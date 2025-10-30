@@ -285,7 +285,6 @@ with tabs[4]:
 
 # Footer
 st.markdown("---")
-st.caption("Formulas used: BMI = kg / m^2; BMR (Mifflin–St Jeor); Body fat (U.S. Navy method); Devine/Hamwi ideal weights.")
+st.caption("Developed By Alizay Ahmed")
 
-# Helpful note for the user
-st.write("Need the app as a single file? It's ready — download or copy the `app.py` file. Run with: `streamlit run app.py`")
+
